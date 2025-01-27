@@ -2,6 +2,9 @@
 
 Este proyecto muestra cómo crear un formulario en Svelte, capturar la entrada de los usuarios y procesar los datos al enviarlo. El ejemplo incluye la validación de los datos antes de enviarlos y muestra cómo usar notificaciones (toast) para informar al usuario sobre el éxito o error del proceso.
 
+### Resultado final
+![Resultado](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/refs/heads/master/procesar-formularios-con-svelte.gif)
+
 ## Características
 
 - Formulario de entrada con campos para **nombre**, **sexo**, **profesión** y **edad**.
@@ -13,6 +16,14 @@ Este proyecto muestra cómo crear un formulario en Svelte, capturar la entrada d
 
 - **Svelte**: Framework para crear interfaces de usuario reactivas.
 - **nextjs-toast-notify**: Librería para mostrar notificaciones emergentes de éxito y error.
+
+> [!IMPORTANT]
+> La librería **Nextjs Toast Notify** es opcional, pero su implementación es tan sencilla que sería un desperdicio no aprovecharla. Mejora significativamente la experiencia del usuario en la aplicación 😮.
+
+#### Documentación oficial Nextjs Toast Notify
+👍[Alertas](https://www.nextjstoastnotify.com/)
+
+👍 [NPM](https://www.npmjs.com/package/nextjs-toast-notify)
 
 ## Instalación
 
