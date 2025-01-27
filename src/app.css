@@ -1,0 +1,33 @@
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: ghostwhite !important;
+}
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+button {
+  background-color: #6401e4 !important;
+  border: #6401e4 !important;
+}
+button:hover {
+  opacity: 0.8;
+}
+input[type="radio"] {
+  height: 20px;
+  width: 20px;
+}
+.form-check-input:checked {
+  background-color: #6401e4 !important;
+  border-color: #6401e4 !important;
+}
