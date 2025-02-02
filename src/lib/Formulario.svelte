@@ -1,4 +1,5 @@
 <script>
+  import { toast } from "nextjs-toast-notify";
   export let data_form = []; // Recibimos el array de contactos como un binding bidireccional
 
   let nombre = "";
@@ -22,6 +23,17 @@
     data_form = [...data_form, data]; // Esto actualizará el array en el padre
 
     resetForm();
+
+    // Mostramos la notificación
+    toast.success("¡Fomulario enviado con éxito!", {
+      duration: 5000,
+      progress: true,
+      position: "top-center",
+      transition: "bounceIn",
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>',
+      sonido: true,
+    });
+
   }
 
   function resetForm() {
