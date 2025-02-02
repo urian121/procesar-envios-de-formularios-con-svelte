@@ -1,7 +1,4 @@
 <script>
-  import { toast } from "nextjs-toast-notify";
-  import "nextjs-toast-notify/dist/nextjs-toast-notify.css";
-
   export let data_form = []; // Recibimos el array de contactos como un binding bidireccional
 
   let nombre = "";
@@ -24,7 +21,6 @@
     // Creamos un nuevo array para forzar la actualización del binding
     data_form = [...data_form, data]; // Esto actualizará el array en el padre
 
-    miToast();
     resetForm();
   }
 
@@ -34,16 +30,6 @@
     profesion = "";
     edad = 18;
     ingles = false;
-  }
-
-  function miToast() {
-    toast.success("¡Contacto agregado con éxito!", {
-      duration: 5000,
-      progress: true,
-      position: "bottom-center",
-      transition: "bounceIn",
-      sonido: true,
-    });
   }
 </script>
 
