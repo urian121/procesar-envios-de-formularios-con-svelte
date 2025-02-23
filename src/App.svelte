@@ -1,9 +1,16 @@
 <script>
   import "bootstrap/dist/css/bootstrap.min.css";
-  import Formulario from "./lib/Formulario.svelte";
-  import Contactos from "./lib/Contactos.svelte";
+  import Formulario from "./components/Formulario.svelte";
+  import Contactos from "./components/Contactos.svelte";
 
-  let contactos = []; // Este es el array de contactos que recibirá el hijo.
+  // Estado reactivo con $state
+  let contactos = $state([]);
+
+  // Función para actualizar el estado desde el hijo
+  function addContacto(nuevoContacto) {
+    // Actualizamos el estado con el nuevo contacto, usando el operador spread (...) para no mutar el estado directamente
+    contactos = [...contactos, nuevoContacto];
+  }
 </script>
 
 <div class="container mt-4">
@@ -20,12 +27,13 @@
       <h1 class="fw-bold text-center border-bottom mb-4">
         Formulario de contacto
       </h1>
-      <!-- Vinculamos la variable 'contactos' al hijo -->
-      <Formulario bind:data_form={contactos} />
+      <!-- Pasamos la función updateContactos como prop -->
+      <Formulario updateContactos={addContacto} />
     </div>
     <div class="col-md-7">
       <h2 class="fw-bold text-center border-bottom mb-4">Datos ingresados</h2>
-      <Contactos {contactos} />
+      <!-- Pasamos el estado contactos como prop -->
+      <Contactos contactos={contactos} />
     </div>
   </div>
 </div>
